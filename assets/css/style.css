@@ -1,12 +1,12 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container_boolzap {
   width: 80%;
   margin: auto;
   border: 1px solid #E5DCD4;
-  height: 100vh;
+  height: 54rem;
 }
 
 img {
