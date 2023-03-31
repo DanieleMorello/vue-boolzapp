@@ -5,14 +5,66 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boolzapp</title>
+  <!-- FONTAWESOME CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <!-- BOOTSTRAP V5.2 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <!-- STYLE CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-  <div id="app">
-    {{ message }}
+<body class="">
+
+  <div id="app" class="d-flex justify-content-center">
+
+    <div class="container_boolzap m-4 d-flex">
+
+      <div id="left">
+
+        <header class="app_header d-flex justify-content-between align-items-center">
+          
+          <span>
+          <img src="./assets/img/avatar_io.jpg" class="img-fluid rounded-circle m-3" alt="">
+          Sofia
+          </span>
+  
+          <span class="d-flex justify-content-between text_secondary">
+            <i class="fa-regular fa-circle p-2"></i>
+            <i class="fa-solid fa-message p-2"></i>
+            <i class="fa-solid fa-ellipsis-vertical p-2 pe-4"></i>
+          </span>
+
+        </header>
+        <!-- /.app_header -->
+
+        <main class="app_main_left">
+          
+        </main>
+        <!-- /.app_main -->
+        
+      </div>
+      <!-- /#left -->
+
+      <div id="right">
+
+        <header class="app_header d-flex justify-content-between align-items-center">
+          
+          <span>
+          <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="">
+          Michele
+          </span>
+  
+          <span class="d-flex justify-content-between text_secondary">
+            <i class="fa-solid fa-magnifying-glass p-2"></i>
+            <i class="fa-solid fa-link p-2"></i>
+            <i class="fa-solid fa-ellipsis-vertical p-2 pe-4"></i>
+          </span>
+          
+        </header>
+
+      </div>
+      <!-- /#right -->
+    </div>
+
   </div>
   
   <!-- SCRIPT BOOTSTRAP -->

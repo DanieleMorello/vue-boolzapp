@@ -1,0 +1,27 @@
+.container_boolzap {
+  width: 80%;
+  margin: auto;
+  border: 1px solid #E5DCD4;
+  height: 100vh;
+}
+
+img {
+  width: 60px;
+}
+
+#left {
+  width: calc(35%);
+  border-right: 1px solid #E5DCD4;
+}
+
+.app_header {
+  border-bottom: 1px solid #E5DCD4;
+}
+
+.text_secondary {
+  color: #B1B1B1;
+}
+
+#right {
+  width: calc(65%);
+}
