@@ -37,8 +37,7 @@ img {
   width: calc(65%);
 }
 
-#right > .app_header,
-#right > .app_header > span {
+#right > .app_header {
   position: relative;
 }
 
@@ -46,6 +45,10 @@ img {
 #right > .app_header > span > strong,
 #app_main_left div > strong {
   font-weight:normal;
+}
+
+#right > .app_header > span {
+  position: relative;
 }
 
 #right > .app_header > span > span {
@@ -63,7 +66,6 @@ img {
 
 #app_main_right {
   background-image: url("../img/mine.jpg");
-  background-color: blue;
   height: calc(100% - 8rem);
 }
 
