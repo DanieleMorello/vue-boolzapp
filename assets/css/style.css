@@ -42,3 +42,7 @@ img {
   height: 3.5rem;
   background-color: #F3EEEA;
 }
+
+#input_message {
+  width: 45rem;
+}
