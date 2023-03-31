@@ -19,9 +19,8 @@ img {
 }
 
 .app_header {
-  border-bottom: 1px solid #E5DCD4;
   height: 4rem;
-  
+  border-bottom: 1px solid #E5DCD4;
 }
 
 .app_header,
@@ -37,7 +36,8 @@ img {
   width: calc(65%);
 }
 
-#right > .app_header {
+#right > .app_header,
+#left > .app_header > span {
   position: relative;
 }
 
@@ -47,21 +47,36 @@ img {
   font-weight:normal;
 }
 
-#right > .app_header > span {
-  position: relative;
-}
-
 #right > .app_header > span > span {
-  position: absolute;
   top: 38px;
   left: 72px;
+}
+
+#right > .app_header > span > span,
+#app_main_left .last_message,
+#app_main_left .clock {
   font-size: 0.7rem;
   color: #B1B1B1;
+  position: absolute;
 }
 
 #app_main_left > header {
   height: 5rem;
   background-color: #8EDAFC;
+}
+
+#app_main_left div {
+  border-top: 1px solid #E5DCD4;
+}
+
+#app_main_left .last_message {
+  top: 265px;
+  left: 244px;
+}
+
+#app_main_left .clock {
+  top: 230px;
+  left: 500px;
 }
 
 #app_main_right {
@@ -76,4 +91,9 @@ img {
 
 #input_message {
   width: 45rem;
+}
+
+.friend_message, 
+#app_main_right {
+  overflow-y: scroll;
 }
