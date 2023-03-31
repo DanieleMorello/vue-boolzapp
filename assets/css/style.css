@@ -69,6 +69,15 @@ img {
   height: calc(100% - 8rem);
 }
 
+.details {
+  margin-top: 1rem;
+  margin-left: -16rem;
+}
+
+.details p {
+  font-size: 0.7rem;
+}
+
 #app_footer_right {
   height: 4rem;
   background-color: #F3EEEA;
