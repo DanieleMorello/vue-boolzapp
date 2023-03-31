@@ -21,6 +21,11 @@ img {
 .app_header {
   border-bottom: 1px solid #E5DCD4;
   height: 4rem;
+  
+}
+
+.app_header,
+[class="input-group p-2"] {
   background-color: #eaeaea;
 }
 
@@ -37,7 +42,8 @@ img {
 }
 
 #left > .app_header > span > strong,
-#right > .app_header > span > strong {
+#right > .app_header > span > strong,
+#app_main_left div > strong {
   font-weight:normal;
 }
 
@@ -47,6 +53,11 @@ img {
   left: 72px;
   font-size: 0.7rem;
   color: #B1B1B1;
+}
+
+#app_main_left > header {
+  height: 5rem;
+  background-color: #8EDAFC;
 }
 
 #app_main_right {
