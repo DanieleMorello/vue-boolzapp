@@ -37,7 +37,8 @@ img {
   width: calc(65%);
 }
 
-#right > .app_header {
+#right > .app_header,
+#right > .app_header > span {
   position: relative;
 }
 
