@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .container_boolzap {
   width: 80%;
   margin: auto;
@@ -6,7 +10,7 @@
 }
 
 img {
-  width: 60px;
+  width: 40px;
 }
 
 #left {
@@ -16,6 +20,8 @@ img {
 
 .app_header {
   border-bottom: 1px solid #E5DCD4;
+  height: 3.5rem;
+  background-color: #eaeaea;
 }
 
 .text_secondary {
@@ -24,4 +30,15 @@ img {
 
 #right {
   width: calc(65%);
+}
+
+#app_main_right {
+  background-image: url("../img/mine.jpg");
+  background-color: blue;
+  height: calc(100% - 7rem);
+}
+
+#app_footer_right {
+  height: 3.5rem;
+  background-color: #F3EEEA;
 }
