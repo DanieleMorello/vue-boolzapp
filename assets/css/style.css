@@ -36,12 +36,6 @@ img {
   width: calc(60%);
 }
 
-#left > .app_header > span > strong,
-#right > .app_header > span > strong,
-#app_main_left div > strong {
-  font-weight:normal;
-}
-
 #right > .app_header > span > span,
 #app_main_left .last_message,
 #app_main_left .clock {
@@ -58,7 +52,7 @@ img {
   background-color: #8EDAFC;
 }
 
-#app_main_left i {
+#app_main_left > header i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,11 +70,11 @@ img {
 }
 
 #app_main_left .friend_message {
-  height: calc(100vh - 15.8rem);
+  height: calc(100vh - 15.7rem);
 }
 
 #app_main_left div {
-  border-top: 1px solid #E5DCD4;
+  border-bottom: 1px solid #E5DCD4;
 }
 
 #app_main_right {
