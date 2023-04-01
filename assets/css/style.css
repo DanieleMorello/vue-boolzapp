@@ -1,4 +1,6 @@
-
+body {
+  background-image: linear-gradient(to bottom, #009688, #65a78b, #97b798, #bfc8b0, #dcdbd1);
+}
 
 .container_boolzap {
   width: 80%;
@@ -47,9 +49,26 @@ img {
   color: #B1B1B1;
 }
 
+#app_main_left {
+  background-color: white;
+}
+
 #app_main_left > header {
   height: 5rem;
   background-color: #8EDAFC;
+}
+
+#app_main_left i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
+  color: #8EDAFC;
+  width: 2rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 #app_main_left .input-group {
@@ -91,3 +110,5 @@ img {
 #app_main_right {
   overflow-y: scroll;
 }
+
+
