@@ -14,7 +14,7 @@ img {
 }
 
 #left {
-  width: calc(35%);
+  width: calc(40%);
   border-right: 1px solid #E5DCD4;
 }
 
@@ -33,7 +33,7 @@ img {
 }
 
 #right {
-  width: calc(65%);
+  width: calc(60%);
 }
 
 #left > .app_header > span > strong,
