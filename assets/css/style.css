@@ -6,7 +6,7 @@ body {
   width: 80%;
   margin: auto;
   border: 1px solid #E5DCD4;
-  height: 54rem;
+  height: 50rem;
 }
 
 img {
@@ -70,7 +70,7 @@ img {
 }
 
 #app_main_left .friend_message {
-  height: calc(100vh - 15.7rem);
+  height: calc(100vh - 17.3rem);
 }
 
 #app_main_left div {
