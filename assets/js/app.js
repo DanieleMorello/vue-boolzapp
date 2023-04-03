@@ -167,7 +167,8 @@ createApp({
             
         }
     ],
-    activeUser : 0
+    activeUser : 0,
+    newMessage: ''
     }
   },
   methods: {
@@ -175,6 +176,10 @@ createApp({
       console.log(index);
       this.activeUser = index
       console.log('User attivo', this.activeUser);
+    },
+    sendNewMessage() {
+        this.contacts.message.push({ message: this.newMessage, status: 'sent' })
+        this.newMessage = ''
     }
   }
 }).mount('#app')
