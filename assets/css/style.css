@@ -1,16 +1,39 @@
 body {
-  background-image: linear-gradient(to bottom, #009688, #65a78b, #97b798, #bfc8b0, #dcdbd1);
+  background: linear-gradient(180deg, #00a884 0%, #00a884 15%, #dddedd 15%, #dddedd 100%);
+  overflow: hidden;
 }
 
 .container_boolzap {
   width: 80%;
   margin: auto;
   border: 1px solid #E5DCD4;
-  height: 50rem;
+  height: 54.2rem;
 }
 
 img {
   width: 40px;
+}
+
+.active {
+  background-color: #e9ebeb;
+}
+
+.sent {
+  background-color: #d5f9ba;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.recived {
+  background-color: #ffffff;
+  align-self: start;
+}
+
+.sent,
+.recived {
+  padding: .5rem;
+  border-radius: 5px;
+  width: 50%;
 }
 
 #left {
@@ -43,6 +66,10 @@ img {
   color: #B1B1B1;
 }
 
+.search_contact_container {
+  background-color: #fdfbf9;
+}
+
 #app_main_left {
   background-color: white;
 }
@@ -65,12 +92,22 @@ img {
   margin: 1rem;
 }
 
+#search_icon {
+  color: #b5b8ba;
+}
+
+[type="search"],
+#search_icon {
+  background-color: #ffffff;
+}
+
 #app_main_left .input-group {
   height: 3.5rem;
+  background-color: #fafafa;
 }
 
 #app_main_left .friend_message {
-  height: calc(100vh - 17.3rem);
+  height: 41.65rem;
 }
 
 #app_main_left div {

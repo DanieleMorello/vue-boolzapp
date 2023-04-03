@@ -6,7 +6,7 @@ createApp({
       contacts: [
         {
             name: 'Michele',
-            avatar: './img/avatar_1.jpg',
+            avatar: 'avatar_1',
             visible: true,
             messages: [
                 {
@@ -28,7 +28,7 @@ createApp({
         },
         {
             name: 'Fabio',
-            avatar: './img/avatar_2.jpg',
+            avatar: 'avatar_2',
             visible: true,
             messages: [
                 {
@@ -50,7 +50,7 @@ createApp({
         },
         {
             name: 'Samuele',
-            avatar: './img/avatar_3.jpg',
+            avatar: 'avatar_3',
             visible: true,
             messages: [
                 {
@@ -72,7 +72,7 @@ createApp({
         },
         {
             name: 'Alessandro B.',
-            avatar: './img/avatar_4.jpg',
+            avatar: 'avatar_4',
             visible: true,
             messages: [
                 {
@@ -89,7 +89,7 @@ createApp({
         },
         {
             name: 'Alessandro L.',
-            avatar: './img/avatar_5.jpg',
+            avatar: 'avatar_5',
             visible: true,
             messages: [
                 {
@@ -106,7 +106,7 @@ createApp({
         },
         {
             name: 'Claudia',
-            avatar: './img/avatar_5.jpg',
+            avatar: 'avatar_5',
             visible: true,
             messages: [
                 {
@@ -128,7 +128,7 @@ createApp({
         },
         {
             name: 'Federico',
-            avatar: './img/avatar_7.jpg',
+            avatar: 'avatar_7',
             visible: true,
             messages: [
                 {
@@ -145,7 +145,7 @@ createApp({
         },
         {
             name: 'Davide',
-            avatar: './img/avatar_8.jpg',
+            avatar: 'avatar_8',
             visible: true,
             messages: [
                 {
@@ -165,7 +165,15 @@ createApp({
                 }
             ],
         }
-    ]
+    ],
+    activeUser : -1
+    }
+  },
+  methods: {
+    setActiveUser(index) {
+      console.log(index);
+      this.activeUser = index
+      console.log('User attivo', this.activeUser);
     }
   }
 }).mount('#app')

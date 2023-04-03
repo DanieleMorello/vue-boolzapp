@@ -49,127 +49,24 @@
             
           </header>
 
-          <div class="d-flex w-100 m-1">
-            <label class="d-flex justify-content-center align-items-center bg-white px-4" for="search_contact_input">
-              <i class="fa-solid fa-magnifying-glass fa-fw text_secondary"></i>
-            </label>
-            <input class="text_secondary flex-grow-1 me-3 my-2" type="search" id="search_contact_input" placeholder="Cerca o inizia nuova chat">
+          <div class="input-group px-2 py-2">
+            <span class="input-group-text px-1 border-0" id="search_icon">
+              <i class="fa-solid fa-magnifying-glass fa-fw"></i>
+            </span>
+            <input type="search" class="input-group-text text-start form-control
+              border-0" placeholder=" Cerca o inizia nuova chat">
           </div>
 
           <div class="friend_message">
 
-            <div class="d-flex">
+            <div class="d-flex" :class="(activeUser === index) ? 'active' : '' " v-for="(contact, index) in contacts" @click="setActiveUser(index)">
               <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
+                <img src="{{  contact.avatar }}" class="img-fluid rounded-circle m-3" alt=" {{ contact.name }}">
               </div>
 
               <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
-              </div>
-              
-              <span class="clock">12:00</span>
-            </div>
-            
-            <div class="d-flex">
-              <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
-              </div>
-
-              <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
-              </div>
-              
-              <span class="clock">12:00</span>
-            </div>
-
-            <div class="d-flex">
-              <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
-              </div>
-
-              <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
-              </div>
-              
-              <span class="clock">12:00</span>
-            </div>
-
-            <div class="d-flex">
-              <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
-              </div>
-
-              <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
-              </div>
-              
-              <span class="clock">12:00</span>
-            </div>
-
-            <div class="d-flex">
-              <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
-              </div>
-
-              <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
-              </div>
-              
-              <span class="clock">12:00</span>
-            </div>
-
-            <div class="d-flex">
-              <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
-              </div>
-
-              <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
-              </div>
-              
-              <span class="clock">12:00</span>
-            </div>
-
-            <div class="d-flex">
-              <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
-              </div>
-
-              <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
-              </div>
-              
-              <span class="clock">12:00</span>
-            </div>
-
-            <div class="d-flex">
-              <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
-              </div>
-
-              <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
-              </div>
-              
-              <span class="clock">12:00</span>
-            </div>
-
-            <div class="d-flex">
-              <div>
-                <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="Immagine profilo">
-              </div>
-
-              <div>
-                <h6 class="m-0 mt-3">Michele</h6> 
-                <p class="last_message m-0">Ultimo  messaggio inviato</p>
+                <h6 class="m-0 mt-3">{{ contact.name }}</h6> 
+                <p class="last_message m-0">{{ contact.messages.date }}</p>
               </div>
               
               <span class="clock">12:00</span>
@@ -204,7 +101,13 @@
         </header>
         <!-- /app_header -->
 
-        <main id="app_main_right">
+        <main id="app_main_right" class="p-5 d-flex flex-column">
+
+          <p class="sent">Hai portato a spasso il cane?</p>
+          
+          <p class="sent">Ricordati di stendere i panni</p>
+
+          <p class="recived">Tutto fatto!</p>
 
         </main>
         <!-- /#app_main_right -->
