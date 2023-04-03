@@ -61,12 +61,12 @@
 
             <div class="d-flex" :class="(activeUser === index) ? 'active' : '' " v-for="(contact, index) in contacts" @click="setActiveUser(index)">
               <div>
-                <img src="{{  contact.avatar }}" class="img-fluid rounded-circle m-3" alt=" {{ contact.name }}">
+                <img :src="'./assets' + contact.avatar"  class="img-fluid rounded-circle m-3" :alt="contact.name">
               </div>
 
               <div>
                 <h6 class="m-0 mt-3">{{ contact.name }}</h6> 
-                <p class="last_message m-0">{{ contact.messages.date }}</p>
+                <p class="last_message m-0">Ultimo messaggio inviato</p>
               </div>
               
               <span class="clock">12:00</span>
@@ -85,9 +85,9 @@
         <header class="app_header d-flex justify-content-between align-items-center">
           
           <div class="d-flex  align-items-center">
-            <img src="./assets/img/avatar_1.jpg" class="img-fluid rounded-circle m-3" alt="">
+            <img :src="'./assets' + contacts[activeUser].avatar" class="img-fluid rounded-circle m-3"  :alt="contacts[activeUser].name">
             <div>
-              <h6 class="m-0">Michele</h6> 
+              <h6 class="m-0">{{ contacts[activeUser].name }}</h6> 
               <p class="text_secondary m-0 lh-1">Ultimo accesso oggi alle 12:00</p>
             </div>
           </div>
