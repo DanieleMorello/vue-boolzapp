@@ -20,20 +20,19 @@ img {
 
 .sent {
   background-color: #d5f9ba;
-  text-align: right;
   align-self: flex-end;
 }
 
-.recived {
+.received {
   background-color: #ffffff;
   align-self: start;
 }
 
 .sent,
-.recived {
+.received {
   padding: .5rem;
   border-radius: 5px;
-  width: 50%;
+  width: 30%;
 }
 
 #left {

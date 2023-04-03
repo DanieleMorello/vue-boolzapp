@@ -101,15 +101,13 @@
         </header>
         <!-- /app_header -->
 
-        <main id="app_main_right" class="p-5">
+        <main id="app_main_right" class="p-5 d-flex flex-column">
 
-          <div class="messages d-flex flex-column">
-            <p class="sent">Hai portato a spasso il cane?</p>
-            <p class="sent">Ricordati di stendere i panni</p>
-            <p class="recived">Tutto fatto!</p>
+          <div :class="message.status === 'sent' ? 'sent' : 'received'" class="messages  m-2" v-for="(message, index) in contacts[activeUser].messages">
+            <p>{{ message.message }}</p>
+            <span>{{ message.date }}</span>
           </div>
           
-
         </main>
         <!-- /#app_main_right -->
 
