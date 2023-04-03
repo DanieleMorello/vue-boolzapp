@@ -168,7 +168,12 @@ createApp({
         }
     ],
     activeUser : 0,
-    newMessage: ''
+    newMessage: '',
+    answer: {
+        message: 'ok',
+        status: 'received'
+    }
+    
     }
   },
   methods: {
@@ -180,6 +185,13 @@ createApp({
     sendNewMessage() {
         this.contacts[this.activeUser].messages.push({ message: this.newMessage, status: 'sent' })
         this.newMessage = ''
+
+        setTimeout(this.reciveAnswer, 1000)
+    },
+    reciveAnswer() {
+        const answer = {...this.answer}
+           
+        this.contacts[this.activeUser].messages.push(answer)
     }
   }
 }).mount('#app')
