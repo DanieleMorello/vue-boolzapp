@@ -178,7 +178,7 @@ createApp({
       console.log('User attivo', this.activeUser);
     },
     sendNewMessage() {
-        this.contacts.message.push({ message: this.newMessage, status: 'sent' })
+        this.contacts[this.activeUser].messages.push({ message: this.newMessage, status: 'sent' })
         this.newMessage = ''
     }
   }
