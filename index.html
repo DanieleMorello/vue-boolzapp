@@ -57,7 +57,7 @@
               border-0" placeholder=" Cerca o inizia nuova chat" v-model="searchContact">
           </div>
 
-          <div class="friend_message">
+          <div class="list_contact">
 
             <div class="d-flex" :class="(activeContact === index) ? 'active' : '', contact.name.toLowerCase().includes(searchContact) ? '' : 'd-none' " v-for="(contact, index) in contacts" @click="setactiveContact(index)">
               <div>
