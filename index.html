@@ -87,7 +87,7 @@
             <img :src="'./assets' + contacts[activeContact].avatar" class="img-fluid rounded-circle m-3"  :alt="contacts[activeContact].name">
             <div>
               <h6 class="m-0">{{ contacts[activeContact].name }}</h6> 
-              <p class="text_secondary m-0 lh-1">Ultimo accesso oggi alle <span>{{  }}</span></p>
+              <p class="text_secondary m-0 lh-1">Ultimo accesso oggi alle <span>{{ contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date }}</span></p>
             </div>
           </div>
 
