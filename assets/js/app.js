@@ -170,6 +170,7 @@ createApp({
     activeContact : 0,
     newMessage: '',
     answer: {
+        date: new Date().toLocaleDateString('it'),
         message: 'ok',
         status: 'received'
     }
@@ -183,14 +184,16 @@ createApp({
       console.log('User attivo', this.activeContact);
     },
     sendNewMessage() {
-        this.contacts[this.activeContact].messages.push({ message: this.newMessage, status: 'sent' })
+        this.contacts[this.activeContact].messages.push({
+            date: new Date().toLocaleDateString('it'),
+            message: this.newMessage,
+            status: 'sent' })
         this.newMessage = ''
 
         setTimeout(this.reciveAnswer, 1000)
     },
     reciveAnswer() {
         const answer = {...this.answer}
-           
         this.contacts[this.activeContact].messages.push(answer)
     }
   }
