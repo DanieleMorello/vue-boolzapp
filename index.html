@@ -54,12 +54,12 @@
               <i class="fa-solid fa-magnifying-glass fa-fw"></i>
             </span>
             <input type="search" class="input-group-text text-start form-control
-              border-0" placeholder=" Cerca o inizia nuova chat">
+              border-0" placeholder=" Cerca o inizia nuova chat" v-model="searchContact">
           </div>
 
           <div class="friend_message">
 
-            <div class="d-flex" :class="(activeContact === index) ? 'active' : '' " v-for="(contact, index) in contacts" @click="setactiveContact(index)">
+            <div class="d-flex" :class="(activeContact === index) ? 'active' : '', contact.name.toLowerCase().includes(searchContact) ? '' : 'd-none' " v-for="(contact, index) in contacts" @click="setactiveContact(index)">
               <div>
                 <img :src="'./assets' + contact.avatar"  class="img-fluid rounded-circle m-3" :alt="contact.name">
               </div>
