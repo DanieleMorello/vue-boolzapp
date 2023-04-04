@@ -177,7 +177,7 @@ createApp({
     };
   },
   methods: {
-    setactiveContact(index) {
+    setActiveContact(index) {
       console.log(index);
       this.activeContact = index;
       console.log("User attivo", this.activeContact);

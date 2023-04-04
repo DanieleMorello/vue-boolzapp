@@ -59,7 +59,7 @@
 
           <div class="list_contact">
 
-            <div class="d-flex" :class="(activeContact === index) ? 'active' : '', contact.name.toLowerCase().includes(searchContact) ? '' : 'd-none' " v-for="(contact, index) in contacts" @click="setactiveContact(index)">
+            <div class="d-flex" :class="(activeContact === index) ? 'active' : '', contact.name.toLowerCase().includes(searchContact) ? '' : 'd-none' " v-for="(contact, index) in contacts" @click="setActiveContact(index)">
               <div>
                 <img :src="'./assets' + contact.avatar"  class="img-fluid rounded-circle m-3" :alt="contact.name">
               </div>
