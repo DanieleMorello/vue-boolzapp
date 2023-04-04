@@ -167,7 +167,7 @@ createApp({
             
         }
     ],
-    activeUser : 0,
+    activeContact : 0,
     newMessage: '',
     answer: {
         message: 'ok',
@@ -177,13 +177,13 @@ createApp({
     }
   },
   methods: {
-    setActiveUser(index) {
+    setactiveContact(index) {
       console.log(index);
-      this.activeUser = index
-      console.log('User attivo', this.activeUser);
+      this.activeContact = index
+      console.log('User attivo', this.activeContact);
     },
     sendNewMessage() {
-        this.contacts[this.activeUser].messages.push({ message: this.newMessage, status: 'sent' })
+        this.contacts[this.activeContact].messages.push({ message: this.newMessage, status: 'sent' })
         this.newMessage = ''
 
         setTimeout(this.reciveAnswer, 1000)
@@ -191,7 +191,7 @@ createApp({
     reciveAnswer() {
         const answer = {...this.answer}
            
-        this.contacts[this.activeUser].messages.push(answer)
+        this.contacts[this.activeContact].messages.push(answer)
     }
   }
 }).mount('#app')

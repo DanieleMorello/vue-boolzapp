@@ -59,7 +59,7 @@
 
           <div class="friend_message">
 
-            <div class="d-flex" :class="(activeUser === index) ? 'active' : '' " v-for="(contact, index) in contacts" @click="setActiveUser(index)">
+            <div class="d-flex" :class="(activeContact === index) ? 'active' : '' " v-for="(contact, index) in contacts" @click="setactiveContact(index)">
               <div>
                 <img :src="'./assets' + contact.avatar"  class="img-fluid rounded-circle m-3" :alt="contact.name">
               </div>
@@ -85,9 +85,9 @@
         <header class="app_header d-flex justify-content-between align-items-center">
           
           <div class="d-flex  align-items-center">
-            <img :src="'./assets' + contacts[activeUser].avatar" class="img-fluid rounded-circle m-3"  :alt="contacts[activeUser].name">
+            <img :src="'./assets' + contacts[activeContact].avatar" class="img-fluid rounded-circle m-3"  :alt="contacts[activeContact].name">
             <div>
-              <h6 class="m-0">{{ contacts[activeUser].name }}</h6> 
+              <h6 class="m-0">{{ contacts[activeContact].name }}</h6> 
               <p class="text_secondary m-0 lh-1">Ultimo accesso oggi alle 12:00</p>
             </div>
           </div>
@@ -103,7 +103,7 @@
 
         <main id="app_main_right" class="p-5 d-flex flex-column">
 
-          <div :class="message.status === 'sent' ? 'sent' : 'received'" class="messages  m-2" v-for="(message, index) in contacts[activeUser].messages">
+          <div :class="message.status === 'sent' ? 'sent' : 'received'" class="messages  m-2" v-for="(message, index) in contacts[activeContact].messages">
             <p>{{ message.message }}</p>
             <span>{{ message.date }}</span>
           </div>
