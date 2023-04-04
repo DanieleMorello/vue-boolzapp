@@ -66,10 +66,9 @@
 
               <div>
                 <h6 class="m-0 mt-3">{{ contact.name }}</h6> 
-                <p class="last_message m-0">Ultimo messaggio inviato</p>
+                <p class="last_message m-0">Ultimo messaggio inviato <span>{{ contact.messages[activeContact].date }}</span></p>
               </div>
               
-              <span class="clock">12:00</span>
             </div>
 
           </div>
@@ -88,7 +87,7 @@
             <img :src="'./assets' + contacts[activeContact].avatar" class="img-fluid rounded-circle m-3"  :alt="contacts[activeContact].name">
             <div>
               <h6 class="m-0">{{ contacts[activeContact].name }}</h6> 
-              <p class="text_secondary m-0 lh-1">Ultimo accesso oggi alle 12:00</p>
+              <p class="text_secondary m-0 lh-1">Ultimo accesso oggi alle <span>{{  }}</span></p>
             </div>
           </div>
 

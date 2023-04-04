@@ -167,10 +167,18 @@ createApp({
         },
       ],
       activeContact: 0,
-      searchContact: '',
+      searchContact: "",
       newMessage: "",
       answer: {
-        date: new Date().toLocaleDateString("it"),
+        date: new Date().toLocaleDateString("it-IT", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        }),
         message: "ok",
         status: "received",
       },
@@ -184,7 +192,15 @@ createApp({
     },
     sendNewMessage() {
       this.contacts[this.activeContact].messages.push({
-        date: new Date().toLocaleDateString("it"),
+        date: new Date().toLocaleDateString("it-IT", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        }),
         message: this.newMessage,
         status: "sent",
       });
@@ -195,6 +211,11 @@ createApp({
     reciveAnswer() {
       const answer = { ...this.answer };
       this.contacts[this.activeContact].messages.push(answer);
+    },
+    lastMessage(index) {
+      const messageArray = this.contacts[index].messages;
+      const lastMessageIndex = messageArray.length - 1;
+      return lastMessageIndex;
     },
   },
 }).mount("#app");
