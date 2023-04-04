@@ -212,10 +212,5 @@ createApp({
       const answer = { ...this.answer };
       this.contacts[this.activeContact].messages.push(answer);
     },
-    lastMessage(index) {
-      const messageArray = this.contacts[index].messages;
-      const lastMessageIndex = messageArray.length - 1;
-      return lastMessageIndex;
-    },
   },
 }).mount("#app");
